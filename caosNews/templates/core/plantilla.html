@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caos</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'dist/css/lightbox.min.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h1 class="icon-newspaper">Caos News</h1>
+            <input type="checkbox" name="" id="menu-bar">
+            <label class="icon-search" for="menu-bar"></label>
+
+            <nav class="menu">
+                <a href="{% url 'CAOS' %}">Inicio</a>
+                <a href="{% url 'GALE' %}">galeria</a>
+                <a href="{% url 'FORMU' %}">formulario</a>
+                <a href="{% url 'CAOS' %}">info noticiario
+                </a>
+                <a href="{% url 'REG' %}">Registro</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="banner">
+            <img src="{% static 'img/foto0.jpeg' %}" alt="">
+            <div class="contenedor">
+                <h2> Noticiario al dia</h2>
+                <a href="{% url 'CAOS' %}">MENU PRINCIPAL</a>
+            </div>
+        </section>
+        {% block contenido %}
+    
+        {% endblock contenido %}
+
+        
+
+    </main>
+    <footer>
+        <div class="contenedor">
+            <h3>Diseño web Caos News</h3>
+        </div>
+    </footer>
+    <script src="{% static 'dist/js/lightbox-plus-jquery.min.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{% extends "core/plantilla.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'dist/css/lightbox.min.css' %}">
+{% endblock css %}
+
+    {% block contenido %}
+    <section id="bienvenido">
+
+            <h2>Galeria de Imagenes</h2>
+    <section id="blog">
+            <div class="contenedor">
+                {% for reg in noticias %}   
+                <article>
+                    <a href="{{reg.imagen.url}}" data-lightbox="Noticia" data-title="Noticia ">
+                        <img src="{{reg.imagen.url}}" alt="">
+                    </a>
+                    <h4>{{reg.nombre}}</h4>
+                </article>}
+                {% endfor %}
+                <article>
+                    <a href="{% static 'img/foto13.jpeg' %}" data-lightbox="Noticia" data-title="Noticia1">
+                        <img src="{% static 'img/foto13.jpeg' %}" alt="">
+                    </a>
+                    <h4>Carreras clandestinas en san bernardo</h4>
+                </article>
+            </div>
+    </section>
+    {% endblock contenido %}
+
+
+{% block js %}
+    <script src="{% static 'dist/js/lightbox-plus-jquery.min.js' %}"></script>
+{% endblock js %}
+
+   

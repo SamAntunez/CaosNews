@@ -1,0 +1,67 @@
+{% extends "core/plantilla.html" %}
+{% load static %}
+{% block contenido %}
+
+
+
+        <section id="bienvenida">
+            <h2>Bienvenido al noticiario</h2>
+
+        </section>
+
+        <section id="blog">
+            <h3>las ultimas noticias</h3>
+            <div class="contenedor">
+                <article>
+                    <a href="{% static 'img/foto2.jpeg' %}" data-lightbox="Noticia" data-title="Noticia 1">
+                        <img src="{% static 'img/foto2.jpeg' %}" alt="">
+                    </a>
+                    <h4>VOTACIONES</h4>
+                </article>
+                <article>
+                    <a href="{% static 'img/foto3.jpg' %}" data-lightbox="Noticia" data-title="Noticia 1">
+                        <img src="{% static 'img/foto3.jpg' %}" alt="">
+                    </a>
+                    <h4>CORONAVIRUS</h4>
+                </article>
+                <article>
+                    <a href="{% static 'img/foto4.jpeg' %}" data-lightbox="Noticia" data-title="Noticia 1">
+                        <img src="{% static 'img/foto4.jpeg' %}" alt="">
+                    </a>
+                    <h4>INMINENTE GUERRA</h4>
+                </article>
+            </div>
+        </section>
+        <section id="info">
+            
+            <div class="contenedor">
+                <div class="info-noti">
+                    <a href="{% static 'img/foto5.jpeg' %}" data-lightbox="Noticia" data-title="Noticia 1">
+                    <img src="{% static 'img/foto5.jpeg' %}" alt="">
+                    </a>
+                    <h4>Noticia relevante 1</h4>
+                </div>
+                <div class="info-noti">
+                    <a href="{% static 'img/foto6.jpg' %}" data-lightbox="Noticia" data-title="Noticia 1">
+                    <img src="{% static 'img/foto6.jpg' %}" alt="">
+                    </a>
+                    <h4>Noticia relevante 2</h4>
+                </div>
+                <div class="info-noti"> 
+                    <a href="{% static 'img/foto7.jpeg' %}" data-lightbox="Noticia" data-title="Noticia 1">
+                    <img src="{% static 'img/foto7.jpeg' %}" alt="">
+                    </a>
+                    <h4>Noticia relevante 3</h4>
+                </div>
+                <div class="info-noti">
+                    <a href="{% static 'img/foto8.jpeg' %}" data-lightbox="Noticia" data-title="Noticia 1">
+                    <img src="{% static 'img/foto8.jpeg' %}" alt="">
+                    </a>
+                    <h4>Noticia relevante 4</h4>
+                </div>
+            </div>
+        </section>
+        
+{% endblock contenido %}
+
+
